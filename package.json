@@ -1,0 +1,16 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "movies platzi video",
+  "main": "index.js",
+  "scripts": {
+    "dev": "SET DEBUG=app:* & nodemon index",
+    "start": "SET NODE_ENV=production & node index"
+  },
+  "author": "Hector Salazar <salaxerd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1"
+  }
+}
