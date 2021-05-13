@@ -4,7 +4,12 @@ const { config } = require("./config/index");
 
 const moviesApi = require("./routes/movies");
 
+const { logErrors, errorHandler } = require("./utils/middleware/errorHandles");
+
+app.use(express.json());
 moviesApi(app);
+app.use(logErrors);
+app.use(errorHandler);
 
 // app.get("/date/:year", (req, res) => {
 //   let year = req.params.year;

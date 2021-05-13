@@ -4,7 +4,7 @@
   "description": "movies platzi video",
   "main": "index.js",
   "scripts": {
-    "dev": "SET DEBUG=app:* & nodemon index",
+    "dev": "set DEBUG=app:* && set NODE_ENV=development && nodemon index",
     "start": "SET NODE_ENV=production & node index"
   },
   "author": "Hector Salazar <salaxerd@gmail.com>",
