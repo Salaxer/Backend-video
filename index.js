@@ -4,11 +4,23 @@ const { config } = require("./config/index");
 
 const moviesApi = require("./routes/movies");
 
-const { logErrors, errorHandler } = require("./utils/middleware/errorHandles");
+const {
+  logErrors,
+  errorHandler,
+  wrapError,
+} = require("./utils/middleware/errorHandles");
 
+const notFoundHandler = require("./utils/middleware/notFoundHandler");
+
+// body parser
 app.use(express.json());
+// routers
 moviesApi(app);
+// catch error 404
+app.use(notFoundHandler);
+// Errors midleware
 app.use(logErrors);
+app.use(wrapError);
 app.use(errorHandler);
 
 // app.get("/date/:year", (req, res) => {
