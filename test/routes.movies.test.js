@@ -11,7 +11,7 @@ describe("routes - movies", () => {
   const request = testServer(route);
 
   describe("GET /movies", function () {
-    it("shoud respond with statis 200", (done) => {
+    it("shoud respond with status 200", (done) => {
       request.get("/api/movies").expect(200, done);
     });
     it("should respond with the list of movies", (done) => {
