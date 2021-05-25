@@ -18,7 +18,7 @@ class usersServices {
       email,
       password: hashedPassword,
     });
-    return this.createUserId;
+    return createUserId;
   }
 }
 
