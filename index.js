@@ -4,6 +4,8 @@ const { config } = require("./config/index");
 
 const moviesApi = require("./routes/movies");
 const userMoviesApi = require("./routes/userMovies");
+const authApi = require("./routes/auth");
+
 const {
   logErrors,
   errorHandler,
@@ -15,6 +17,7 @@ const notFoundHandler = require("./utils/middleware/notFoundHandler");
 // body parser
 app.use(express.json());
 // routers
+authApi(app);
 moviesApi(app);
 userMoviesApi(app);
 // catch error 404

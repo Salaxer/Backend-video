@@ -12,6 +12,9 @@ const validatioHandler = require("../utils/middleware/validationHandle");
 const cacheResponse = require("../utils/cacheResponse");
 const { FIVE_MINUTES_IN_SECONDS, SIXTY_MINUTES } = require("../utils/time");
 
+//JWT startegy
+require("../utils/auth/strategies/jwt");
+
 function moviesApi(app) {
   const router = express.Router();
   const movieServices = new MoviesService();
